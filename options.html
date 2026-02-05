@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>YouTube Cleaner — Options</title>
+    <style>
+      body { max-width: 720px; margin: 32px auto; font-family: system-ui, Arial, sans-serif; padding: 0 16px; }
+      h1 { margin-top: 0; }
+      .card { border: 1px solid #e5e5e5; border-radius: 12px; padding: 16px; }
+      .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+      label { display: flex; align-items: center; gap: 8px; }
+      .muted { color: #555; font-size: 14px; }
+      .row { display: flex; gap: 10px; align-items: center; }
+      button { padding: 8px 12px; border-radius: 8px; border: 1px solid #ddd; background: #f7f7f7; cursor: pointer; }
+      button:hover { background: #f0f0f0; }
+    </style>
+  </head>
+  <body>
+    <h1>YouTube Cleaner — Options</h1>
+    <div class="card">
+      <div class="row">
+        <label><input type="checkbox" id="enabled" /> Enable on YouTube</label>
+      </div>
+      <hr />
+      <p class="muted">Choose what to hide:</p>
+      <div class="grid">
+        <label><input type="checkbox" id="hide_home_feed" /> Home Feed</label>
+        <label><input type="checkbox" id="hide_sidebar" /> Side Recommendations</label>
+        <label><input type="checkbox" id="hide_shorts" /> Shorts</label>
+        <label><input type="checkbox" id="hide_endcards" /> End Cards</label>
+        <label><input type="checkbox" id="hide_comments" /> Comments</label>
+        <label><input type="checkbox" id="hide_thumbnails" /> Blur Thumbnails</label>
+      </div>
+      <hr />
+      <div class="row">
+        <button id="reset">Reset to Defaults</button>
+      </div>
+    </div>
+
+    <script src="options.js"></script>
+  </body>
+</html>

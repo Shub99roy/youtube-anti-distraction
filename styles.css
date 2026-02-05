@@ -1,0 +1,44 @@
+/* These rules are applied conditionally via data-attributes set by content.js */
+
+/* Hide homepage feed */
+html[data-ytc-hide-home="true"] ytd-rich-grid-renderer #contents,
+html[data-ytc-hide-home="true"] tp-yt-paper-dialog ytd-feed-filter-chip-bar-renderer,
+html[data-ytc-hide-home="true"] ytd-rich-section-renderer {
+  display: none !important;
+}
+
+/* Hide right sidebar recommendations on watch pages */
+html[data-ytc-hide-sidebar="true"] ytd-watch-flexy #secondary,
+html[data-ytc-hide-sidebar="true"] ytd-watch-next-secondary-results-renderer {
+  display: none !important;
+}
+
+/* Hide Shorts shelves (home/search/etc.) */
+html[data-ytc-hide-shorts="true"] ytd-rich-section-renderer,
+html[data-ytc-hide-shorts="true"] ytd-reel-shelf-renderer,
+html[data-ytc-hide-shorts="true"] ytd-reel-shelf-renderer #contents {
+  display: none !important;
+}
+
+/* Hide end cards on the player */
+html[data-ytc-hide-endcards="true"] .ytp-endscreen-content,
+html[data-ytc-hide-endcards="true"] .ytp-ce-element {
+  display: none !important;
+}
+
+/* Optional: hide comments block */
+html[data-ytc-hide-comments="true"] ytd-comments,
+html[data-ytc-hide-comments="true"] #comments {
+  display: none !important;
+}
+
+/* Optional: blur/hide thumbnails (kept off by default) */
+html[data-ytc-hide-thumbs="true"] #thumbnail img,
+html[data-ytc-hide-thumbs="true"] ytd-thumbnail img {
+  filter: blur(20px) !important;
+}
+
+/* Keep header/search visible and page layout stable */
+ytd-app, ytd-page-manager, ytd-watch-flexy {
+  /* no layout shifts forced by us */
+}

@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>YouTube Cleaner</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>YouTube Cleaner</h1>
+
+      <label class="row">
+        <input type="checkbox" id="enabled" />
+        <span>Enable on YouTube</span>
+      </label>
+
+      <hr />
+
+      <div class="grid">
+        <label><input type="checkbox" id="hide_home_feed" /> Hide Home Feed</label>
+        <label><input type="checkbox" id="hide_sidebar" /> Hide Side Recommendations</label>
+        <label><input type="checkbox" id="hide_shorts" /> Hide Shorts</label>
+        <label><input type="checkbox" id="hide_endcards" /> Hide End Cards</label>
+        <label><input type="checkbox" id="hide_comments" /> Hide Comments</label>
+        <label><input type="checkbox" id="hide_thumbnails" /> Blur Thumbnails</label>
+      </div>
+
+      <p class="hint">
+        Changes apply instantly on open YouTube tabs.
+      </p>
+
+      <div class="links">
+        <a href="#" id="openOptions">Open Options</a>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
